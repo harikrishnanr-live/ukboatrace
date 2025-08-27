@@ -1,1 +1,192 @@
-hii
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper Kuttanad Boat Race 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+        .card-3d { transform-style: preserve-3d; transition: transform 0.5s; }
+        .card-3d:hover { transform: translateY(-10px) rotateX(10deg) rotateY(10deg); }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+    </style>
+</head>
+<body class="font-sans bg-kuttanad-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-kuttanad-800 text-white py-4 shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://via.placeholder.com/50" alt="Logo" class="w-10 h-10 rounded-full">
+                <h1 class="text-2xl font-bold font-serif">Upper Kuttanad Boat Race</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-kuttanad-100 transition">Home</a></li>
+                    <li><a href="boats.html" class="hover:text-kuttanad-100 transition">Boats</a></li>
+                    <li><a href="committee.html" class="hover:text-kuttanad-100 transition">Committee</a></li>
+                    <li><a href="gallery.html" class="hover:text-kuttanad-100 transition">Gallery</a></li>
+                    <li><a href="contact.html" class="hover:text-kuttanad-100 transition">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Slider -->
+    <section id="home" class="h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="swiper h-full w-full absolute top-0 left-0 z-0">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://www.thehosteller.com/_next/image/?url=https%3A%2F%2Fstatic.thehosteller.com%2Fhostel%2Fimages%2FIMG_boat_race.jpg%2FIMG_boat_race-1720182609568.jpg&w=2048&q=75" alt="Boat Race" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://irisholidays.com/keralatourism/wp-content/uploads/2012/07/snake-boat-race-kerala.jpg" alt="Boat Race" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://static.thehosteller.com/blogimage/dl.beatsnoop.com-1691733666-1691733960868.jpg" alt="Boat Race" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10 text-white">
+            <h2 class="text-6xl font-bold font-serif mb-6 animate-pulse-slow">Upper Kuttanad Boat Race</h2>
+            <p class="text-2xl mb-8 max-w-3xl mx-auto">Experience the thrill of Kerala's most prestigious boat race. Witness the speed, skill, and tradition of the legendary snake boats on the backwaters of Kuttanad.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="boats.html" class="bg-white text-kuttanad-700 hover:bg-kuttanad-100 font-bold py-3 px-6 rounded-full transition transform hover:scale-105">View Boats</a>
+                <a href="#schedule" class="bg-transparent border-2 border-white hover:bg-white hover:text-kuttanad-700 font-bold py-3 px-6 rounded-full transition transform hover:scale-105">Race Schedule</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold font-serif mb-6 text-kuttanad-700">About the Race</h2>
+                <p class="text-lg mb-8">The Upper Kuttanad Boat Race is a celebration of Kerala's rich cultural heritage and the spirit of teamwork. Held annually, this event attracts thousands of spectators and features the finest snake boats (Chundan Vallams) from across the region.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="bg-kuttanad-50 p-6 rounded-xl shadow-lg glass">
+                        <h3 class="text-xl font-bold mb-2 text-kuttanad-700">Date</h3>
+                        <p class="text-2xl font-bold">August 31, 2025</p>
+                    </div>
+                    <div class="bg-kuttanad-50 p-6 rounded-xl shadow-lg glass">
+                        <h3 class="text-xl font-bold mb-2 text-kuttanad-700">Venue</h3>
+                        <p class="text-2xl font-bold">Kuttanad Backwaters, Alappuzha</p>
+                    </div>
+                    <div class="bg-kuttanad-50 p-6 rounded-xl shadow-lg glass">
+                        <h3 class="text-xl font-bold mb-2 text-kuttanad-700">Time</h3>
+                        <p class="text-2xl font-bold">2:00 PM IST</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="py-20 bg-kuttanad-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold font-serif mb-6 text-kuttanad-700">History & Tradition</h2>
+                <p class="text-lg mb-8">The Upper Kuttanad Boat Race has a history spanning over five decades. What started as a local event has now become a grand spectacle, drawing crowds from all over the world. The race is not just a competition, but a celebration of Kerala's rich maritime heritage and the spirit of unity and teamwork.</p>
+                <p class="text-lg mb-8">The Chundan Vallams, or snake boats, are a symbol of Kerala's craftsmanship and tradition. Each boat is meticulously crafted and can accommodate up to 100 rowers, making the race a breathtaking display of synchronization and strength.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold font-serif text-center mb-16 text-kuttanad-700">What People Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-kuttanad-50 p-6 rounded-xl shadow-lg glass">
+                    <p class="text-lg mb-4">"The Upper Kuttanad Boat Race is an experience like no other. The energy, the excitement, and the sheer beauty of the backwaters make it a must-visit event."</p>
+                    <p class="font-bold">- John Mathew</p>
+                </div>
+                <div class="bg-kuttanad-50 p-6 rounded-xl shadow-lg glass">
+                    <p class="text-lg mb-4">"I've been attending the race for years, and every time it feels like the first. The tradition, the competition, and the camaraderie are unmatched."</p>
+                    <p class="font-bold">- Anjali Menon</p>
+                </div>
+                <div class="bg-kuttanad-50 p-6 rounded-xl shadow-lg glass">
+                    <p class="text-lg mb-4">"As a photographer, the Upper Kuttanad Boat Race offers some of the most stunning visuals. The colors, the action, and the backdrop are simply magical."</p>
+                    <p class="font-bold">- Arun Kumar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Race Schedule -->
+    <section id="schedule" class="py-20 bg-kuttanad-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold font-serif text-center mb-16 text-kuttanad-700">Race Schedule</h2>
+            <div class="overflow-x-auto bg-white rounded-xl shadow-lg glass p-6">
+                <table class="min-w-full">
+                    <thead class="bg-kuttanad-600 text-white">
+                        <tr>
+                            <th class="py-4 px-6 text-left">Time</th>
+                            <th class="py-4 px-6 text-left">Event</th>
+                            <th class="py-4 px-6 text-left">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-kuttanad-50 transition">
+                            <td class="py-4 px-6">10:00 AM</td>
+                            <td class="py-4 px-6">Inauguration</td>
+                            <td class="py-4 px-6">Flag hoisting and cultural programs</td>
+                        </tr>
+                        <tr class="border-b hover:bg-kuttanad-50 transition">
+                            <td class="py-4 px-6">12:00 PM</td>
+                            <td class="py-4 px-6">Preliminary Heats</td>
+                            <td class="py-4 px-6">Qualifying rounds for participating boats</td>
+                        </tr>
+                        <tr class="border-b hover:bg-kuttanad-50 transition">
+                            <td class="py-4 px-6">2:00 PM</td>
+                            <td class="py-4 px-6">Final Race</td>
+                            <td class="py-4 px-6">Upper Kuttanad Boat Race Final</td>
+                        </tr>
+                        <tr class="border-b hover:bg-kuttanad-50 transition">
+                            <td class="py-4 px-6">4:30 PM</td>
+                            <td class="py-4 px-6">Award Ceremony</td>
+                            <td class="py-4 px-6">Prize distribution and closing ceremony</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-br from-kuttanad-700 to-kuttanad-900 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold font-serif mb-6 animate-pulse-slow">Join Us for the Grand Event!</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Be a part of the Upper Kuttanad Boat Race 2025. Witness the excitement, cheer for your favorite team, and celebrate the spirit of Kerala.</p>
+            <a href="contact.html" class="bg-white text-kuttanad-700 hover:bg-kuttanad-100 font-bold py-3 px-8 rounded-full transition transform hover:scale-105 inline-flex items-center">
+                <i class="fas fa-ticket-alt mr-2"></i> Get Tickets
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-kuttanad-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Upper Kuttanad Boat Race. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        });
+    </script>
+</body>
+</html>
