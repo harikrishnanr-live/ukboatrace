@@ -6,12 +6,57 @@
     <title>Gallery | Upper Kuttanad Boat Race</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <style>
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%);
+        }
+        .gallery-item {
+            transition: all 0.3s ease;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-item img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .section-header {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        .section-header:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            border-radius: 2px;
+        }
+    </style>
 </head>
 <body class="font-poppins bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-gradient-to-r from-blue-800 to-teal-700 text-white shadow-lg fixed w-full z-50">
+    <nav class="gradient-bg text-white shadow-lg fixed w-full z-50">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold">Upper Kuttanad Boat Race</a>
             <div class="hidden md:flex space-x-8">
@@ -20,6 +65,7 @@
                 <a href="gallery.html" class="hover:text-yellow-300 transition">Gallery</a>
                 <a href="about.html" class="hover:text-yellow-300 transition">About Us</a>
                 <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
+                <a href="support.html" class="hover:text-yellow-300 transition">Support</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -27,45 +73,289 @@
                 </svg>
             </button>
         </div>
-        <div id="mobile-menu" class="md:hidden hidden bg-blue-800 px-6 py-3">
+        <div id="mobile-menu" class="md:hidden hidden gradient-bg px-6 py-3">
             <a href="index.html" class="block py-2 hover:text-yellow-300 transition">Home</a>
             <a href="boats.html" class="block py-2 hover:text-yellow-300 transition">Boats & Captains</a>
             <a href="gallery.html" class="block py-2 hover:text-yellow-300 transition">Gallery</a>
             <a href="about.html" class="block py-2 hover:text-yellow-300 transition">About Us</a>
             <a href="contact.html" class="block py-2 hover:text-yellow-300 transition">Contact</a>
+            <a href="support.html" class="block py-2 hover:text-yellow-300 transition">Support</a>
         </div>
     </nav>
 
-    <div class="container mx-auto px-6 py-24">
-        <h1 class="text-4xl font-bold text-center mb-12 text-gray-800">Race Gallery</h1>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition cursor-pointer" onclick="openModal('assets/images/gallery1.jpg')">
-                <img src="assets/images/gallery1.jpg" alt="Gallery Image" class="w-full h-48 object-cover">
-            </div>
-            <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition cursor-pointer" onclick="openModal('assets/images/gallery2.jpg')">
-                <img src="assets/images/gallery2.jpg" alt="Gallery Image" class="w-full h-48 object-cover">
-            </div>
+    <!-- Hero Section -->
+    <div class="gradient-bg py-24 text-center text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold mb-4">Race Gallery</h1>
+            <p class="text-xl max-w-3xl mx-auto">Relive the thrill and excitement of the Upper Kuttanad Boat Race through our photo gallery.</p>
         </div>
     </div>
 
-    <!-- Modal -->
-    <div id="modal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
-        <div class="max-w-4xl max-h-screen overflow-hidden">
-            <img id="modal-image" src="" alt="Enlarged Image" class="max-w-full max-h-screen">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-white text-3xl">&times;</button>
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-12">
+        <h2 class="section-header">Race Moments</h2>
+        <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
+            <!-- Gallery Images -->
+            <div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic1.jpg">
+        <img src="assets/images/gallery/pic1.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic2.jpg">
+        <img src="assets/images/gallery/pic2.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic3.jpg">
+        <img src="assets/images/gallery/pic3.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic4.jpg">
+        <img src="assets/images/gallery/pic4.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic5.jpg">
+        <img src="assets/images/gallery/pic5.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic6.jpg">
+        <img src="assets/images/gallery/pic6.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic7.jpg">
+        <img src="assets/images/gallery/pic7.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic8.jpg">
+        <img src="assets/images/gallery/pic8.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic9.jpg">
+        <img src="assets/images/gallery/pic9.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic10.jpg">
+        <img src="assets/images/gallery/pic10.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic11.jpg">
+        <img src="assets/images/gallery/pic11.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic12.jpg">
+        <img src="assets/images/gallery/pic12.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic13.jpg">
+        <img src="assets/images/gallery/pic13.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic14.jpg">
+        <img src="assets/images/gallery/pic14.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic15.jpg">
+        <img src="assets/images/gallery/pic15.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic16.jpg">
+        <img src="assets/images/gallery/pic16.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic17.jpg">
+        <img src="assets/images/gallery/pic17.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic18.jpg">
+        <img src="assets/images/gallery/pic18.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic19.jpg">
+        <img src="assets/images/gallery/pic19.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic20.jpg">
+        <img src="assets/images/gallery/pic20.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic21.jpg">
+        <img src="assets/images/gallery/pic21.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic22.jpg">
+        <img src="assets/images/gallery/pic22.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic23.jpg">
+        <img src="assets/images/gallery/pic23.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic24.jpg">
+        <img src="assets/images/gallery/pic24.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic25.jpg">
+        <img src="assets/images/gallery/pic25.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic26.jpg">
+        <img src="assets/images/gallery/pic26.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic27.jpg">
+        <img src="assets/images/gallery/pic27.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic28.jpg">
+        <img src="assets/images/gallery/pic28.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic29.jpg">
+        <img src="assets/images/gallery/pic29.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic30.jpg">
+        <img src="assets/images/gallery/pic30.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic31.jpg">
+        <img src="assets/images/gallery/pic31.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic32.jpg">
+        <img src="assets/images/gallery/pic32.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic33.jpg">
+        <img src="assets/images/gallery/pic33.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic34.jpg">
+        <img src="assets/images/gallery/pic34.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic35.jpg">
+        <img src="assets/images/gallery/pic35.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic36.jpg">
+        <img src="assets/images/gallery/pic36.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic37.jpg">
+        <img src="assets/images/gallery/pic37.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic38.jpg">
+        <img src="assets/images/gallery/pic38.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic39.jpg">
+        <img src="assets/images/gallery/pic39.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic40.jpg">
+        <img src="assets/images/gallery/pic40.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic41.jpg">
+        <img src="assets/images/gallery/pic41.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic42.jpg">
+        <img src="assets/images/gallery/pic42.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+<div class="gallery-item break-inside-avoid">
+    <a data-fancybox="gallery" href="assets/images/gallery/thumb/pic43.jpg">
+        <img src="assets/images/gallery/pic43.jpg" alt="Boat Race" class="w-full h-auto rounded-lg">
+    </a>
+</div>
+
+            
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-blue-800 to-teal-700 text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-            <p class="mb-4">&copy; 2025 Upper Kuttanad Boat Race. All rights reserved.</p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="hover:text-yellow-300 transition">Facebook</a>
-                <a href="#" class="hover:text-yellow-300 transition">Instagram</a>
-                <a href="#" class="hover:text-yellow-300 transition">Twitter</a>
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <p>&copy; 2025 Upper Kuttanad Boat Race. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-yellow-300 transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="hover:text-yellow-300 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="hover:text-yellow-300 transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="hover:text-yellow-300 transition">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu Toggle -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Fancybox -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script>
+        Fancybox.bind("[data-fancybox]", {
+            // Your custom options
+        });
+    </script>
 </body>
 </html>

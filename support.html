@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Upper Kuttanad Boat Race</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .qr-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="font-poppins bg-gray-50">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">Upper Kuttanad Boat Race</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-yellow-300 transition">Home</a>
+                <a href="boats.html" class="hover:text-yellow-300 transition">Boats & Captains</a>
+                <a href="gallery.html" class="hover:text-yellow-300 transition">Gallery</a>
+                <a href="about.html" class="hover:text-yellow-300 transition">About Us</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
+                <a href="support.html" class="hover:text-yellow-300 transition">Support</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden gradient-bg px-6 py-3">
+            <a href="index.html" class="block py-2 hover:text-yellow-300 transition">Home</a>
+            <a href="boats.html" class="block py-2 hover:text-yellow-300 transition">Boats & Captains</a>
+            <a href="gallery.html" class="block py-2 hover:text-yellow-300 transition">Gallery</a>
+            <a href="about.html" class="block py-2 hover:text-yellow-300 transition">About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-300 transition">Contact</a>
+            <a href="support.html" class="block py-2 hover:text-yellow-300 transition">Support</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg py-24 text-center text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold mb-4">Support the Upper Kuttanad Boat Race</h1>
+            <p class="text-xl max-w-2xl mx-auto">Your contribution helps preserve Kerala's rich boat race tradition and supports local communities.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-12">
+        <!-- Bank Details Card -->
+        <div class="bg-white rounded-xl shadow-xl p-6 mb-12 hover-scale">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/017/441/744/small/qr-code-icon-qr-code-sample-for-smartphone-scanning-isolated-illustration-vector.jpg" alt="Support Image" class="w-full max-w-md mx-auto rounded-lg qr-shadow">
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <h2 class="text-2xl font-semibold text-center md:text-left mb-6 text-gray-800">Bank Transfer</h2>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b pb-2">
+                            <strong class="text-gray-700">Account Name:</strong>
+                            <span class="text-gray-600">Upper Kuttanad Boat Race</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <strong class="text-gray-700">Bank Name:</strong>
+                            <span class="text-gray-600">Kuttanad Bank</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <strong class="text-gray-700">Account Number:</strong>
+                            <span class="text-gray-600">12345678901234</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <strong class="text-gray-700">IFSC Code:</strong>
+                            <span class="text-gray-600">KUTB0001234</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <strong class="text-gray-700">Branch:</strong>
+                            <span class="text-gray-600">Kuttanad City Branch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GPay Card -->
+        <div class="bg-white rounded-xl shadow-xl p-6 hover-scale">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/017/441/744/small/qr-code-icon-qr-code-sample-for-smartphone-scanning-isolated-illustration-vector.jpg" alt="GPay QR Code" class="w-full max-w-xs mx-auto rounded-lg qr-shadow">
+                </div>
+                <div class="md:w-1/2 md:pl-10 text-center md:text-left">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-800">Google Pay (GPay)</h2>
+                    <p class="text-gray-600 mb-4">Scan the QR code or use the number below to donate via GPay:</p>
+                    <div class="text-xl font-bold text-gray-800 mb-4">+91 12345 67890</div>
+                    <button class="bg-gradient-to-r from-blue-500 to-teal-500 text-white px-6 py-2 rounded-lg hover:from-blue-600 hover:to-teal-600 transition">
+                        Donate via GPay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <p>&copy; 2025 Upper Kuttanad Boat Race. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-yellow-300 transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="hover:text-yellow-300 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="hover:text-yellow-300 transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="hover:text-yellow-300 transition">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

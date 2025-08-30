@@ -6,12 +6,77 @@
     <title>Boats & Captains | Upper Kuttanad Boat Race</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%);
+        }
+        .boat-card {
+            transition: all 0.3s ease;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .boat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+        }
+        .win-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        .club-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+        .section-header {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        .section-header:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            border-radius: 2px;
+        }
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, rgba(217, 119, 6, 0.3), transparent);
+            margin: 3rem auto;
+            width: 80%;
+        }
+    </style>
 </head>
 <body class="font-poppins bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-gradient-to-r from-blue-800 to-teal-700 text-white shadow-lg fixed w-full z-50">
+    <nav class="gradient-bg text-white shadow-lg fixed w-full z-50">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold">Upper Kuttanad Boat Race</a>
             <div class="hidden md:flex space-x-8">
@@ -20,6 +85,7 @@
                 <a href="gallery.html" class="hover:text-yellow-300 transition">Gallery</a>
                 <a href="about.html" class="hover:text-yellow-300 transition">About Us</a>
                 <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
+                <a href="support.html" class="hover:text-yellow-300 transition">Support</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -27,51 +93,228 @@
                 </svg>
             </button>
         </div>
-        <div id="mobile-menu" class="md:hidden hidden bg-blue-800 px-6 py-3">
+        <div id="mobile-menu" class="md:hidden hidden gradient-bg px-6 py-3">
             <a href="index.html" class="block py-2 hover:text-yellow-300 transition">Home</a>
             <a href="boats.html" class="block py-2 hover:text-yellow-300 transition">Boats & Captains</a>
             <a href="gallery.html" class="block py-2 hover:text-yellow-300 transition">Gallery</a>
             <a href="about.html" class="block py-2 hover:text-yellow-300 transition">About Us</a>
             <a href="contact.html" class="block py-2 hover:text-yellow-300 transition">Contact</a>
+            <a href="support.html" class="block py-2 hover:text-yellow-300 transition">Support</a>
         </div>
     </nav>
 
-    <div class="container mx-auto px-6 py-24">
-        <h1 class="text-4xl font-bold text-center mb-12 text-gray-800">Participating Boats & Captains</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-                <img src="assets/images/boat1.jpg" alt="Chundan Vallam" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">Chundan Vallam</h3>
-                    <p class="text-gray-700 mb-2">Captain: Rajesh Kumar</p>
-                    <p class="text-gray-600 mb-2">Club: Kuttanad Rowing Club</p>
-                    <p class="text-gray-600 mb-4">Wins: 5</p>
-                    <p class="text-gray-600">Chundan Vallam, also known as snake boats, are the stars of Kerala's boat races. These long, narrow boats can accommodate up to 100 rowers and are a symbol of Kerala's maritime heritage.</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-                <img src="assets/images/boat2.jpg" alt="Veppu Vallam" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold mb-2">Veppu Vallam</h3>
-                    <p class="text-gray-700 mb-2">Captain: Anil Kumar</p>
-                    <p class="text-gray-600 mb-2">Club: Alappuzha Boat Club</p>
-                    <p class="text-gray-600 mb-4">Wins: 3</p>
-                    <p class="text-gray-600">Veppu Vallam are known for their speed and agility. These boats are slightly smaller than Chundan Vallam but are equally competitive and thrilling to watch.</p>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <div class="gradient-bg py-24 text-center text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold mb-4">Meet the Boats & Captains</h1>
+            <p class="text-xl max-w-3xl mx-auto">Discover the legendary boats and their skilled captains competing in the Upper Kuttanad Boat Race.</p>
         </div>
     </div>
 
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-12">
+        <!-- Chundan Vallam Section -->
+        <section class="mb-16">
+            <h2 class="section-header">Chundan Vallam</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="boat-card bg-white">
+                    <div class="relative">
+                        <img src="https://img.onmanorama.com/content/dam/mm/en/kerala/top-news/images/2023/7/25/thalavady-chundan.jpg?w=1120&h=583" alt="Melpadom Chundan" class="w-full h-64 object-cover">
+                        <div class="win-badge">5 Wins</div>
+                        <div class="club-badge">Kuttanad Rowing Club</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Melpadom Chundan</h3>
+                        <p class="text-gray-700 mb-2">Captain: <span class="font-semibold">Rajesh Kumar</span></p>
+                        <p class="text-gray-600">The pride of Kuttanad, known for its speed and agility.</p>
+                    </div>
+                </div>
+                <div class="boat-card bg-white">
+                    <div class="relative">
+                        <img src="https://img.onmanorama.com/content/dam/mm/en/kerala/top-news/images/2023/7/25/thalavady-chundan.jpg?w=1120&h=583" alt="Nadubhagam Chundan" class="w-full h-64 object-cover">
+                        <div class="win-badge">4 Wins</div>
+                        <div class="club-badge">Nadubhagam</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Nadubhagam Chundan</h3>
+                        <p class="text-gray-700 mb-2">Captain: <span class="font-semibold">Suresh Babu</span></p>
+                        <p class="text-gray-600">Famous for its powerful strokes and experienced crew.</p>
+                    </div>
+                </div>
+                <div class="boat-card bg-white">
+                    <div class="relative">
+                        <img src="https://img.onmanorama.com/content/dam/mm/en/kerala/top-news/images/2023/7/25/thalavady-chundan.jpg?w=1120&h=583" alt="Karichal Chundan" class="w-full h-64 object-cover">
+                        <div class="win-badge">6 Wins</div>
+                        <div class="club-badge">Karichal</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Karichal Chundan</h3>
+                        <p class="text-gray-700 mb-2">Captain: <span class="font-semibold">Vinod George</span></p>
+                        <p class="text-gray-600">A crowd favorite with a record of consistent victories.</p>
+                    </div>
+                </div>
+                <div class="boat-card bg-white">
+                    <div class="relative">
+                        <img src="https://img.onmanorama.com/content/dam/mm/en/kerala/top-news/images/2023/7/25/thalavady-chundan.jpg?w=1120&h=583" alt="Thazhathuveettil Chundan" class="w-full h-64 object-cover">
+                        <div class="win-badge">3 Wins</div>
+                        <div class="club-badge">Thazhathuveettil</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Thazhathuveettil Chundan</h3>
+                        <p class="text-gray-700 mb-2">Captain: <span class="font-semibold">Anil Kumar</span></p>
+                        <p class="text-gray-600">Known for its strategic racing and skilled oarsmen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Veppu Vallam Section -->
+        <section class="mb-16">
+            <h2 class="section-header">Veppu Vallam</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="boat-card bg-white">
+                    <div class="relative">
+                        <img src="https://travelsntourism.com/wp-content/uploads/2016/06/31ea708.jpg" alt="Niranam Veppu" class="w-full h-64 object-cover">
+                        <div class="win-badge">3 Wins</div>
+                        <div class="club-badge">Niranam</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Niranam Veppu</h3>
+                        <p class="text-gray-700 mb-2">Captain: <span class="font-semibold">Anil Kumar</span></p>
+                        <p class="text-gray-600">Renowned for its speed and agility on the water.</p>
+                    </div>
+                </div>
+                <div class="boat-card bg-white">
+                    <div class="relative">
+                        <img src="https://travelsntourism.com/wp-content/uploads/2016/06/31ea708.jpg" alt="Kainakary Veppu" class="w-full h-64 object-cover">
+                        <div class="win-badge">2 Wins</div>
+                        <div class="club-badge">Kainakary</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Kainakary Veppu</h3>
+                        <p class="text-gray-700 mb-2">Captain: <span class="font-semibold">Rajiv Nair</span></p>
+                        <p class="text-gray-600">A strong contender with a history of close finishes.</p>
+                    </div>
+                </div>
+                <div class="boat-card bg-white">
+                    <div class="relative">
+                        <img src="https://travelsntourism.com/wp-content/uploads/2016/06/31ea708.jpg" alt="Kumarakom Veppu" class="w-full h-64 object-cover">
+                        <div class="win-badge">4 Wins</div>
+                        <div class="club-badge">Kumarakom</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Kumarakom Veppu</h3>
+                        <p class="text-gray-700 mb-2">Captain: <span class="font-semibold">Sanjay Menon</span></p>
+                        <p class="text-gray-600">Consistent performer with a dedicated crew.</p>
+                    </div>
+                </div>
+                <div class="boat-card bg-white">
+                    <div class="relative">
+                        <img src="https://travelsntourism.com/wp-content/uploads/2016/06/31ea708.jpg" alt="Thrikkunnapuzha Veppu" class="w-full h-64 object-cover">
+                        <div class="win-badge">5 Wins</div>
+                        <div class="club-badge">Thrikkunnapuzha</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Thrikkunnapuzha Veppu</h3>
+                        <p class="text-gray-700 mb-2">Captain: <span class="font-semibold">Sreejith Nair</span></p>
+                        <p class="text-gray-600">A veteran boat with a legacy of victories.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Iruttukuthi Vallam Section -->
+        <section class="mb-16">
+            <h2 class="section-header">Iruttukuthi Vallam</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="boat-card bg-white">
+                    <div class="relative">
+                        <img src="https://th-i.thgim.com/public/news/national/kerala/cziyde/article24259963.ece/alternates/FREE_1200/TV26BOATRACEEE" alt="Kottayam Iruttukuthi" class="w-full h-64 object-cover">
+                        <div class="win-badge">4 Wins</div>
+                        <div class="club-badge">Kottayam</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Kottayam Iruttukuthi</h3>
+                        <p class="text-gray-700 mb-2">Captain: <span class="font-semibold">Vinod George</span></p>
+                        <p class="text-gray-600">Famous for its dark wood and powerful strokes.</p>
+                    </div>
+                </div>
+                <div class="boat-card bg-white">
+                    <div class="relative">
+                        <img src="https://th-i.thgim.com/public/news/national/kerala/cziyde/article24259963.ece/alternates/FREE_1200/TV26BOATRACEEE" alt="Kanjikuzhy Iruttukuthi" class="w-full h-64 object-cover">
+                        <div class="win-badge">2 Wins</div>
+                        <div class="club-badge">Kanjikuzhy</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Kanjikuzhy Iruttukuthi</h3>
+                        <p class="text-gray-700 mb-2">Captain: <span class="font-semibold">Rahul Menon</span></p>
+                        <p class="text-gray-600">A fast and agile boat with a young crew.</p>
+                    </div>
+                </div>
+                <div class="boat-card bg-white">
+                    <div class="relative">
+                        <img src="https://th-i.thgim.com/public/news/national/kerala/cziyde/article24259963.ece/alternates/FREE_1200/TV26BOATRACEEE" alt="Kidangoor Iruttukuthi" class="w-full h-64 object-cover">
+                        <div class="win-badge">3 Wins</div>
+                        <div class="club-badge">Kidangoor</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Kidangoor Iruttukuthi</h3>
+                        <p class="text-gray-700 mb-2">Captain: <span class="font-semibold">Sandeep Nair</span></p>
+                        <p class="text-gray-600">Known for its endurance and strategic racing.</p>
+                    </div>
+                </div>
+                <div class="boat-card bg-white">
+                    <div class="relative">
+                        <img src="https://th-i.thgim.com/public/news/national/kerala/cziyde/article24259963.ece/alternates/FREE_1200/TV26BOATRACEEE" alt="Ettumanoor Iruttukuthi" class="w-full h-64 object-cover">
+                        <div class="win-badge">5 Wins</div>
+                        <div class="club-badge">Ettumanoor</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Ettumanoor Iruttukuthi</h3>
+                        <p class="text-gray-700 mb-2">Captain: <span class="font-semibold">Vijay Menon</span></p>
+                        <p class="text-gray-600">A legendary boat with a history of dominance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-blue-800 to-teal-700 text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-            <p class="mb-4">&copy; 2025 Upper Kuttanad Boat Race. All rights reserved.</p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="hover:text-yellow-300 transition">Facebook</a>
-                <a href="#" class="hover:text-yellow-300 transition">Instagram</a>
-                <a href="#" class="hover:text-yellow-300 transition">Twitter</a>
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <p>&copy; 2025 Upper Kuttanad Boat Race. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-yellow-300 transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="hover:text-yellow-300 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="hover:text-yellow-300 transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="hover:text-yellow-300 transition">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu Toggle -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
