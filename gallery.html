@@ -1,236 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery - Upper Kuttanad Boat Race 2025</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-
-  <style>
-    body { font-family: 'Poppins', sans-serif; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Upper Kuttanad Boat Race</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="font-poppins bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-blue-800 to-teal-700 text-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">Upper Kuttanad Boat Race</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-yellow-300 transition">Home</a>
+                <a href="boats.html" class="hover:text-yellow-300 transition">Boats & Captains</a>
+                <a href="gallery.html" class="hover:text-yellow-300 transition">Gallery</a>
+                <a href="about.html" class="hover:text-yellow-300 transition">About Us</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-blue-800 px-6 py-3">
+            <a href="index.html" class="block py-2 hover:text-yellow-300 transition">Home</a>
+            <a href="boats.html" class="block py-2 hover:text-yellow-300 transition">Boats & Captains</a>
+            <a href="gallery.html" class="block py-2 hover:text-yellow-300 transition">Gallery</a>
+            <a href="about.html" class="block py-2 hover:text-yellow-300 transition">About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-300 transition">Contact</a>
+        </div>
+    </nav>
 
-  <!-- Header -->
-  <header class="bg-green-900 text-white py-4 shadow-lg fixed w-full z-50">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <div class="flex items-center space-x-2">
-        <img src="https://via.placeholder.com/50" alt="Logo" class="w-10 h-10 rounded-full">
-        <h1 class="text-2xl font-bold font-serif">Upper Kuttanad Boat Race</h1>
-      </div>
-      <nav>
-        <ul class="flex space-x-6">
-          <li><a href="index.html" class="hover:text-yellow-300 transition">Home</a></li>
-          <li><a href="boats.html" class="hover:text-yellow-300 transition">Boats</a></li>
-          <li><a href="committee.html" class="hover:text-yellow-300 transition">Committee</a></li>
-          <li><a href="gallery.html" class="hover:text-yellow-300 transition">Gallery</a></li>
-          <li><a href="contact.html" class="hover:text-yellow-300 transition">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="container mx-auto px-6 py-24">
+        <h1 class="text-4xl font-bold text-center mb-12 text-gray-800">Race Gallery</h1>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition cursor-pointer" onclick="openModal('assets/images/gallery1.jpg')">
+                <img src="assets/images/gallery1.jpg" alt="Gallery Image" class="w-full h-48 object-cover">
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition cursor-pointer" onclick="openModal('assets/images/gallery2.jpg')">
+                <img src="assets/images/gallery2.jpg" alt="Gallery Image" class="w-full h-48 object-cover">
+            </div>
+        </div>
     </div>
-  </header>
 
-  <!-- Gallery Section -->
-  <section class="pt-32 pb-20 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold font-serif text-center mb-16 text-green-800">Gallery</h2>
-      
-      <!-- Gallery Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        
-        <!-- All Images -->
-        <a href="assets/images/3M9A9363.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9363.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9428.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9428.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9436.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9436.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9453.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9453.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9455.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9455.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9464.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9464.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9467.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9467.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9523.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9523.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9615.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9615.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9621.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9621.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9626.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9626.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9654.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9654.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9699.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9699.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9710.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9710.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9755.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9755.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9762.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9762.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9775.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9775.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9790.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9790.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9820.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9820.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9822.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9822.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9830.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9830.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9842.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9842.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9844.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9844.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9851.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9851.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9891.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9891.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9895.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9895.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9901.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9901.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9906.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9906.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9909.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9909.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9910.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9910.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9913.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9913.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9914.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9914.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-                <a href="assets/images/3M9A9924.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9924.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9954.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9954.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9955.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9955.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9965.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9965.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9966.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9966.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9967.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9967.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9972.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9972.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9976.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9976.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9995.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9995.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-        <a href="assets/images/3M9A9999.JPG" class="glightbox group rounded-xl overflow-hidden shadow-lg">
-          <img src="assets/images/3M9A9999.JPG" alt="Boat Race" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-        </a>
-
-      </div>
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
+        <div class="max-w-4xl max-h-screen overflow-hidden">
+            <img id="modal-image" src="" alt="Enlarged Image" class="max-w-full max-h-screen">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-white text-3xl">&times;</button>
+        </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-green-900 text-white py-8">
-    <div class="container mx-auto px-4 text-center">
-      <p>&copy; 2025 Upper Kuttanad Boat Race. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script>
-    const lightbox = GLightbox({
-      selector: '.glightbox',
-      touchNavigation: true,
-      loop: true,
-      zoomable: true
-    });
-  </script>
-
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-800 to-teal-700 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">&copy; 2025 Upper Kuttanad Boat Race. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-yellow-300 transition">Facebook</a>
+                <a href="#" class="hover:text-yellow-300 transition">Instagram</a>
+                <a href="#" class="hover:text-yellow-300 transition">Twitter</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
